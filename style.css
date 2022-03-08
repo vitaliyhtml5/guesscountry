@@ -7,12 +7,33 @@
     outline: none;
 }
 body {
+    min-height: 100vh;
     color: #db4234;
     font-family: 'Fredoka', Arial, sans-serif;
     background-color: #fb9e96;
 }
 ul li {
     list-style-type: none;
+}
+button {
+    display: block;
+    width: 160px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    background-color: #2a74be;
+    transition: .4s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #2a6aaa;
+}
+button:active {
+    background-color: #26609b;
 }
 .container {
     max-width: 993px;
@@ -24,6 +45,7 @@ ul li {
 .header-wrap {
     display: flex;
     align-items: center;
+    padding-top: 10px;
 }
 .header-wrap img {
     width: 45px;
@@ -33,6 +55,38 @@ ul li {
     color: #2a74be;
     font-size: 42px;
 }
+.utility-wrap {
+    margin-left: auto;
+    color: #7b2abe;
+}
+.hint {
+    position: relative;
+    margin-left: 10px;
+    color: #7b2abe;
+    opacity: 0.3;
+    text-align: center;
+    transition: .4s;
+    cursor: pointer;
+}
+.hint span {
+    position: absolute;
+    bottom: -130%;
+    right: 0;
+    display: none;
+    min-width: 90px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #2a74be;
+    font-size: 18px;
+    background-color: #faebeb;
+    cursor: default !important;
+}
+.hint:hover>span {
+    display: block;
+}
+.hint:hover {
+    opacity: 1;
+}
 
 /* Quiz */
 .content-wrap {
@@ -41,4 +95,54 @@ ul li {
 .content-wrap h2 {
     font-size: 32px;
     text-align: center;
+}
+.quiz-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    margin: 50px auto 0;
+}
+.quiz-wrap form {
+    display: flex;
+    flex-direction: column;
+}
+.quiz-wrap label {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.quiz-wrap label::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #db4234;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.quiz-wrap input:checked+span {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #db4234;
+    transform: translateY(-50%);
+} 
+.quiz-wrap input {
+    visibility: hidden;
+}
+.quiz-wrap label:last-child {
+    margin-bottom: 0;
+}
+.quiz-wrap img {
+    height: 180px;
+}
+.check-btn {
+    margin: 40px auto;
 }
