@@ -1,7 +1,8 @@
 Options:
 
 1. Variants: 2,3,4
-2. Geography: All, Europe, America, Africa, Asia, Others 
+2. Geography: All, Europe, America, Africa, Asia
 3. Timer: none, 5s, 10s
+4. Type: Map, Flag, Capital
 
 Hint - geography
