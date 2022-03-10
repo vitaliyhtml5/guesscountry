@@ -8,7 +8,12 @@ $type = mysqli_real_escape_string($dbc, trim($_GET['type']));
 $answer_count = mysqli_real_escape_string($dbc, trim($_GET['count']));
 
 $arr_id = get_id($geography, $type, $dbc);
-get_country($arr_id, (int) $answer_count, $dbc);
+
+for ($i = 0; $i < 10; $i++) {
+    $data[] = get_country($arr_id, (int) $answer_count, $dbc);
+}
+send_res($data);
+
 
 function get_country($arr_id, $answer_count, $dbc) {
     $rand = array_rand($arr_id, $answer_count);
@@ -25,7 +30,7 @@ function get_country($arr_id, $answer_count, $dbc) {
     $result = mysqli_query($dbc, $query) or die(mysqli_error());
 
     while ($row = mysqli_fetch_array($result)) {
-        $data[] = array(
+        $data = array(
             'country' => $row['country'],
             'capital' => $row['capital'],
             'geography' => $row['name'],
@@ -34,8 +39,7 @@ function get_country($arr_id, $answer_count, $dbc) {
             'incorrect' => $incor_data
         );
     }
-
-    send_res($data);
+    return $data;
 }
 
 //Incorrect answer
