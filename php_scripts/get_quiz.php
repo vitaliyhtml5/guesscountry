@@ -8,25 +8,42 @@ $type = mysqli_real_escape_string($dbc, trim($_GET['type']));
 $answer_count = mysqli_real_escape_string($dbc, trim($_GET['count']));
 
 $arr_id = get_id($geography, $type, $dbc);
+$data = [];
+$correct_id = [];
+$incorrect_answ = [];
 
-for ($i = 0; $i < 10; $i++) {
-    $data[] = get_country($arr_id, (int) $answer_count, $dbc);
+$i = 0;
+while ($i < 10) {    
+    if (get_answers($arr_id, $answer_count, $dbc)) {
+        $data[] = get_country($correct_id[$i], $incorrect_answ, $dbc);
+        $i++;
+    }
+    else continue;
 }
 send_res($data);
 
-
-function get_country($arr_id, $answer_count, $dbc) {
+//Get correct and incorrect id 
+function get_answers($arr_id, $answer_count, $dbc) {
+    global $correct_id;
+    global $incorrect_answ;
     $rand = array_rand($arr_id, $answer_count);
-    $cor = $arr_id[$rand[0]];
-
-    for ($i = 1; $i < $answer_count; $i++) {
-        $incor_data[] = createIncor($arr_id[$rand[$i]], $dbc);
+    
+    if (in_array($arr_id[$rand[0]], $correct_id)) return false;
+    else {
+        $correct_id[] = $arr_id[$rand[0]];
+        $incorrect_answ = [];
+        for ($i = 1; $i < $answer_count; $i++) {
+            $incorrect_answ[] = createIncor($arr_id[$rand[$i]], $dbc);
+        }
+        return true;
     }
+}
 
-    //Correct answer
+//Correct answer
+function get_country($correct_id, $incorrect_answ, $dbc) {     
     $query = "SELECT c.country,c.capital,g.name,c.map,c.flag FROM guess_countries c
     JOIN guess_geography g ON c.geography_id = g.id
-    WHERE c.id = $cor";
+    WHERE c.id = $correct_id";
     $result = mysqli_query($dbc, $query) or die(mysqli_error());
 
     while ($row = mysqli_fetch_array($result)) {
@@ -36,7 +53,7 @@ function get_country($arr_id, $answer_count, $dbc) {
             'geography' => $row['name'],
             'map' => $row['map'],
             'flag' => $row['flag'],
-            'incorrect' => $incor_data
+            'incorrect' => $incorrect_answ
         );
     }
     return $data;
