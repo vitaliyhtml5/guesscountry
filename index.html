@@ -14,8 +14,8 @@
                 <img src="img/logo.png" alt="Guess country logo">
                 <h1>Guess country</h1>
                 <div class="utility-wrap">
-                    <span class="counter">1 / 10</span>
-                    <span class="hint">Hint<span>Asia</span></span>
+                    <span class="counter"></span>
+                    <span class="hint"></span>
                 </div>
             </div>
         </div>
@@ -24,17 +24,17 @@
         <div class="container">
             <div class="content-wrap">
                 <h2>What is the country here?</h2>
-                <div class="quiz-wrap">
-                    <form>
-                        <label><input type="radio" name="country"><span></span>Great Britain</label>
-                        <label><input type="radio" name="country"><span></span>USA</label>
-                        <label><input type="radio" name="country"><span></span>Japan</label>
-                    </form>
-                    <img src="img/country/1.svg">
-                </div>
-                <button class="check-btn">Check</button>
+                <b class="timer"></b>
+                <form class="quiz-wrap">
+                    <div class="answer"></div>
+                    <div class="question"></div>
+                    <div class="check-btn-wrap">
+                        <button>Next</button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
+    <script src="js_scripts/script.js" type="module"></script>
 </body>
 </html>

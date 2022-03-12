@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
+    /* outline: none; */
 }
 body {
     min-height: 100vh;
@@ -78,6 +78,7 @@ button:active {
     border-radius: 3px;
     color: #2a74be;
     font-size: 18px;
+    text-transform: capitalize;
     background-color: #faebeb;
     cursor: default !important;
 }
@@ -90,7 +91,16 @@ button:active {
 
 /* Quiz */
 .content-wrap {
+    position: relative;
     padding: 40px 0 20px;
+}
+.timer {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    color: #2a74be;
+    font-size: 28px;
+    letter-spacing: 1px;
 }
 .content-wrap h2 {
     font-size: 32px;
@@ -98,13 +108,25 @@ button:active {
 }
 .quiz-wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 750px;
     margin: 50px auto 0;
 }
-.quiz-wrap form {
+.quiz-wrap .answer {
     display: flex;
     flex-direction: column;
+}
+.quiz-wrap .result-show {
+    position: relative;
+}
+.quiz-wrap .result-show::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .quiz-wrap label {
     position: relative;
@@ -140,9 +162,56 @@ button:active {
 .quiz-wrap label:last-child {
     margin-bottom: 0;
 }
-.quiz-wrap img {
+.quiz-wrap .correct-answ::before,
+.quiz-wrap .incorrect-answ::before {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url(img/check.svg) 50%/100% no-repeat;
+}
+.quiz-wrap .incorrect-answ::before {
+    background-image: url(img/cross.svg);
+}
+.quiz-wrap .correct-answ span,
+.quiz-wrap .incorrect-answ span {
+    display: none;
+}
+.question {
+    align-self: center;
+}
+.quiz-wrap img[data-type="map"] {
+    max-width: 300px;
     height: 180px;
 }
-.check-btn {
+.quiz-wrap img[data-type="flag"] {
+    height: 100px;
+}
+.question b {
+    color: #7b2abe;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+.quiz-wrap .check-btn-wrap {
+    width: 100%;
+}
+.check-btn-wrap button {
     margin: 40px auto;
+}
+
+/* Test result page */
+.result-page b {
+    display: block;
+    margin-top: 15px;
+    color: #2a74be;
+    font-size: 26px;
+    text-align: center;
+}
+.result-page img {
+    display: block;
+    width: 80px;
+    margin: 40px auto;
+}
+.result-page button {
+    margin: 0 auto;
 }
