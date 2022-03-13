@@ -5,7 +5,7 @@ require_once('./send_res.php');
 
 $geography = mysqli_real_escape_string($dbc, trim($_GET['geography']));
 $type = mysqli_real_escape_string($dbc, trim($_GET['type']));
-$answer_count = mysqli_real_escape_string($dbc, trim($_GET['count']));
+$answer_count = mysqli_real_escape_string($dbc, trim($_GET['options']));
 
 $arr_id = get_id($geography, $type, $dbc);
 $data = [];

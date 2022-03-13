@@ -89,6 +89,91 @@ button:active {
     opacity: 1;
 }
 
+/* Preview */
+.preview-wrap,
+.settings-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 30px;
+    width: 450px;
+    margin: 40px auto;
+    padding: 25px 20px;
+    border: 1px solid #7b2abe;
+    border-radius: 4px;
+}
+.preview-wrap span {
+    position: relative;
+    width: 25%;
+    padding-left: 25px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.preview-wrap span::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -12px;
+    width: 22px;
+    height: 22px;
+    background: url(img/cubes.svg) 50% no-repeat;
+    transform: translateY(-50%);
+}
+.preview-wrap span:nth-child(1):before {
+    background-image: url(img/cubes.svg);
+}
+.preview-wrap span:nth-child(2):before {
+    background-image: url(img/earth.svg);
+}
+.preview-wrap span:nth-child(3):before {
+    background-image: url(img/test.svg);
+}
+.preview-wrap span:nth-child(4):before {
+    background-image: url(img/clock.svg);
+}
+.preview-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin: 0 auto 20px;
+}
+.preview-btn button {
+    width: 48%;
+}
+
+/* Settings */
+.settings-wrap {
+    justify-items: flex-start;
+    align-items: start;
+    width: 760px;
+}
+.settings-wrap fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+}
+.settings-wrap legend {
+    margin-bottom: 10px;
+    color: #2a74be;
+    font-size: 22px;
+}
+.settings-wrap fieldset label {
+    margin: 0 20px 7px 0;
+    padding-left: 10px;
+    font-size: 19px;
+    text-transform: capitalize;
+}
+.settings-wrap fieldset label::before {
+    width: 12px;
+    height: 12px;
+}
+.settings-wrap fieldset input:checked+span {
+    left: 4px;
+    width: 8px;
+    height: 8px;
+}
+
+
 /* Quiz */
 .content-wrap {
     position: relative;
@@ -128,14 +213,14 @@ button:active {
     width: 100%;
     height: 100%;
 }
-.quiz-wrap label {
+.content-wrap label {
     position: relative;
     margin-bottom: 30px;
     padding-left: 20px;
     font-size: 25px;
     cursor: pointer;
 }
-.quiz-wrap label::before {
+.content-wrap label::before {
     position: absolute;
     content: '';
     top: 50%;
@@ -146,7 +231,7 @@ button:active {
     border-radius: 50%;
     transform: translateY(-50%);
 }
-.quiz-wrap input:checked+span {
+.content-wrap input:checked+span {
     position: absolute;
     top: 50%;
     left: 6px;
@@ -156,7 +241,7 @@ button:active {
     background-color: #db4234;
     transform: translateY(-50%);
 } 
-.quiz-wrap input {
+.content-wrap input {
     visibility: hidden;
 }
 .quiz-wrap label:last-child {

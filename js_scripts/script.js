@@ -1,15 +1,20 @@
 import {createTest} from './createTest.js';
+import {createPage} from './createPage.js';
 
-const test = {
-    geography: 'europe',
+//Default test details
+const testDetails = {
+    options: 3,
+    geography: 'all',
     type: 'flag',
-    count: 3,
-    timer: 5,
+    timer: 'none',
 }
 
-getData(0);
-async function getData(counter) {
-    const res = await fetch(`./php_scripts/get_quiz.php?geography=${test.geography}&type=${test.type}&count=${test.count}`);
+createPage(testDetails);
+
+async function getData(counter, testDetails) {
+    const res = await fetch(`./php_scripts/get_quiz.php?geography=${testDetails.geography}&type=${testDetails.type}&options=${testDetails.options}`);
     const data = await res.json();
-    createTest(data, test.type, test.geography, test.count, counter, 0, test.timer);
+    createTest(data, testDetails, counter, 0);
 }
+
+export {getData};

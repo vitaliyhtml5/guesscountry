@@ -1,13 +1,15 @@
 import {checkResult} from './checkResult.js';
 
-const createTest = (data, type, geography, number, count, result, timer) => {
+const createTest = (data, testDetails, count, result) => {
+    const hint =  document.querySelector('.hint');
     const answer = document.querySelector('.answer');
     const question = document.querySelector('.question');
-    const orderAnswer = getRandomArr(number);
+    const orderAnswer = getRandomArr(testDetails.options);
+    document.querySelector('.utility-wrap').style.display = 'block';
 
     //Create answers
     answer.innerHTML = ``; 
-    for (let i = 0; i < number; i++) {
+    for (let i = 0; i < testDetails.options; i++) {
         answer.innerHTML += `<label><input type="radio" name="country"><span></span></label>`;
     }
     
@@ -20,30 +22,30 @@ const createTest = (data, type, geography, number, count, result, timer) => {
     document.querySelector('.counter').textContent = `${count+1} / 10`;
 
     //Create question
-    if (type === 'map') {
-        question.innerHTML = `<img src="img/${type}/${data[count].map}" data-type="map">`;
-    } else if (type === 'flag') {
-        question.innerHTML = `<img src="img/${type}/${data[count].flag}" data-type="flag">`;
-    } else if (type === 'capital') {
+    if (testDetails.type === 'map') {
+        question.innerHTML = `<img src="img/${testDetails.type}/${data[count].map}" data-type="map">`;
+    } else if (testDetails.type === 'flag') {
+        question.innerHTML = `<img src="img/${testDetails.type}/${data[count].flag}" data-type="flag">`;
+    } else if (testDetails.type === 'capital') {
         question.innerHTML = `<b>${data[count].capital}</b>`;
     }
 
     //Create hint for all
-    if (geography === 'all') {
-        document.querySelector('.hint').innerHTML = `Hint<span>${data[count].geography}</span>`;
-    } else {
-        document.querySelector('.hint').style.display = 'none';
+    if (testDetails.geography === 'all') {
+        hint.innerHTML = `Hint<span>${data[count].geography}</span>`;
+        hint.style.display = 'inline-block';
     }
+    else hint.style.display = 'none';
 
-    checkResult(data, type, geography, number, count, result, timer);
+    checkResult(data, testDetails, count, result);
 }
 
-function getRandomArr(number) {
-    const random = () => Math.floor(Math.random() * number);
+function getRandomArr(options) {
+    const random = () => Math.floor(Math.random() * options);
     const arr = [];
     let i = 0;
 
-    while (i < number) {
+    while (i < options) {
         let index = random();
         if (arr.includes(index)) continue;
         else {
@@ -53,6 +55,5 @@ function getRandomArr(number) {
     }
     return arr;
 }
-
 
 export {createTest};

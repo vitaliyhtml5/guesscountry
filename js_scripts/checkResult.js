@@ -1,7 +1,7 @@
 import {createTest} from './createTest.js';
 import {showResult} from './showResult.js';
 
-const checkResult = (data, type, geography, number, count, result, timer) => {
+const checkResult = (data, testDetails, count, result) => {
     const answer = document.querySelector('.quiz-wrap .answer');
     const label = document.querySelectorAll('.quiz-wrap label');
     const btn = document.querySelector('.check-btn-wrap button');
@@ -10,15 +10,15 @@ const checkResult = (data, type, geography, number, count, result, timer) => {
     let countTime;
 
     if (count === 9) btn.textContent = 'Finish';
-    if (timer !== 'none') setTimer();
+    if (testDetails.timer !== 'none') setTimer();
     
     btn.onclick = e => {
         e.preventDefault();
         clearInterval(countTime);
         answer.classList.remove('result-show');
 
-        if (btn.textContent === 'Next') createTest(data, type, geography, number, count+1, testResult, timer);
-        else if (btn.textContent === 'Finish') showResult(testResult);
+        if (btn.textContent === 'Next') createTest(data, testDetails, count+1, testResult);
+        else if (btn.textContent === 'Finish') showResult(testResult, testDetails);
     }
 
     label.forEach( (el,index) => {
@@ -48,9 +48,9 @@ const checkResult = (data, type, geography, number, count, result, timer) => {
 
     //Set timer
     function setTimer() {
-        let testTime = timer;
+        let testTime = testDetails.timer;
     
-        document.querySelector('.timer').textContent = timer;
+        document.querySelector('.timer').textContent = testDetails.timer;
         
         countTime = setInterval(() => {
             testTime--;
