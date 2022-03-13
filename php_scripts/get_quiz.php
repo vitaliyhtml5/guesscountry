@@ -2,32 +2,38 @@
 
 require_once('./dbc.php');
 require_once('./send_res.php');
+require_once('./check_token.php');
 
-$geography = mysqli_real_escape_string($dbc, trim($_GET['geography']));
-$type = mysqli_real_escape_string($dbc, trim($_GET['type']));
-$answer_count = mysqli_real_escape_string($dbc, trim($_GET['options']));
+if (!check_token()) {
+    http_response_code('401');
+    send_res(array('message' => 'Unauthorized'));
+} else {
+    $geography = mysqli_real_escape_string($dbc, trim($_GET['geography']));
+    $type = mysqli_real_escape_string($dbc, trim($_GET['type']));
+    $answer_count = mysqli_real_escape_string($dbc, trim($_GET['options']));
 
-$arr_id = get_id($geography, $type, $dbc);
-$data = [];
-$correct_id = [];
-$incorrect_answ = [];
+    $arr_id = get_id($geography, $type, $dbc);
+    $data = [];
+    $correct_id = [];
+    $incorrect_answ = [];
 
-$i = 0;
-while ($i < 10) {    
-    if (get_answers($arr_id, $answer_count, $dbc)) {
-        $data[] = get_country($correct_id[$i], $incorrect_answ, $dbc);
-        $i++;
+    $i = 0;
+    while ($i < 10) {    
+        if (get_answers($arr_id, $answer_count, $dbc)) {
+            $data[] = get_country($correct_id[$i], $incorrect_answ, $dbc);
+            $i++;
+        }
+        else continue;
     }
-    else continue;
+    send_res($data);
 }
-send_res($data);
 
 //Get correct and incorrect id 
 function get_answers($arr_id, $answer_count, $dbc) {
     global $correct_id;
     global $incorrect_answ;
     $rand = array_rand($arr_id, $answer_count);
-    
+
     if (in_array($arr_id[$rand[0]], $correct_id)) return false;
     else {
         $correct_id[] = $arr_id[$rand[0]];

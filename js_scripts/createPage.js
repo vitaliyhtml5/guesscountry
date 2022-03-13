@@ -1,5 +1,16 @@
 import {getData} from './script.js';
 
+const loginPage = () => {
+    document.querySelector('.content-wrap').innerHTML = `
+    <h2>Login</h2>
+    <form class="login-wrap">
+        <div class="error-message"><b></b></div>
+        <label>Email:<input></label>
+        <label>Password:<input></label>
+        <button>Next</button>
+    </form>`;
+}
+
 const createPage = testDetails => {
     document.querySelector('.content-wrap').innerHTML = `
     <div class="preview-page">
@@ -112,4 +123,4 @@ const createPage = testDetails => {
     }
 }
 
-export {createPage};
+export {loginPage,createPage};
