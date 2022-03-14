@@ -1,80 +1,115 @@
-1,Algeria,Algiers,4,algeria.svg,algeria.svg
-2,Angola,Luanda,4,angola.svg,angola.svg
-3,Argentina,Buenos Aires,3,argentina.svg,argentina.svg
-4,Austria,Vienna,1,austria.svg,austria.svg
-5,Bahamas,Nassau,3,bahamas.svg,bahamas.svg
-6,Belarus,Minsk,1,belarus.svg,belarus.svg
-7,Belgium,Brussels,1,belgium.svg,belgium.svg
-8,Bolivia,La Paz,3,bolivia.svg,bolivia.svg
-9,Botswana,Gaborone,4,botswana.svg,botswana.svg
-10,Brazil,Brasília,3,brazil.svg,brazil.svg
-11,Bulgaria,Sofia,1,bulgaria.svg,bulgaria.svg
-12,Cameroon,Yaounde,4,cameroon.svg,cameroon.svg
-13,Canada,Ottawa,3,canada.svg,canada.svg
-14,Chile,Santiago,3,chile.svg,chile.svg
-15,China,Beijing,2,china.svg,china.svg
-16,Colombia,Bogota,3,colombia.svg,colombia.svg
-17,Croatia,Zagreb,1,croatia.svg,croatia.svg
-18,Cuba,Havana,3,cuba.svg,cuba.svg
-19,Czech Republic,Prague,1,czech-republic.svg,czech-republic.svg
-20,Denmark,Copenhagen,1,denmark.svg,denmark.svg
-21,Egypt,Cairo,4,egypt.svg,egypt.svg
-22,Finland,Helsinki,1,finland.svg,finland.svg
-23,France,Paris,1,france.svg,france.svg
-24,Georgia,Tbilisi,2,georgia.svg,georgia.svg
-25,Germany,Berlin,1,germany.svg,germany.svg
-26,Ghana,Accra,4,ghana.svg,ghana.svg
-27,Guinea,Conakry,4,guinea.svg,guinea.svg
-28,Hungary,Budapest,1,hungary.svg,hungary.svg
-29,Iceland,Reykjavík,1,iceland.svg,iceland.svg
-30,India,New Delhi,2,india.svg,india.svg
-31,Indonesia,Jakarta,2,indonesia.svg,indonesia.svg
-32,Iran,Tehran,2,iran.svg,iran.svg
-33,Israel,Jerusalem,2,israel.svg,israel.svg
-34,Italy,Rome,1,italy.svg,italy.svg
-35,Japan,Tokyo,2,japan.svg,japan.svg
-36,Kazakhstan,Nur-Sultan,2,kazakhstan.svg,kazakhstan.svg
-37,Kenya,Nairobi,4,kenya.svg,kenya.svg
-38,Kyrgyzstan,Bishkek,2,kyrgyzstan.svg,kyrgyzstan.svg
-39,Laos,Vientiane,2,laos.svg,laos.svg
-40,Liberia,Monrovia,4,liberia.svg,liberia.svg
-41,Libya,Tripoli,4,libya.svg,libya.svg
-42,Malaysia,Kuala Lumpur,2,malaysia.svg,malaysia.svg
-43,Mali,Bamako,4,mali.svg,mali.svg
-44,Mauritania,Nouakchott,4,mauritania.svg,mauritania.svg
-45,Mexico,Mexico City,3,mexico.svg,mexico.svg
-46,Mongolia,Ulaanbaatar,2,mongolia.svg,mongolia.svg
-47,Morocco,Rabat,4,morocco.svg,morocco.svg
-48,Myanmar,Naypyidaw,2,myanmar.svg,myanmar.svg
-49,Namibia,Windhoek,4,namibia.svg,namibia.svg
-50,Niger,Niamey,4,niger.svg,niger.svg
-51,Norway,Oslo,1,norway.svg,norway.svg
-52,Pakistan,Islamabad,2,pakistan.svg,pakistan.svg
-53,Paraguay,Asuncion,3,paraguay.svg,paraguay.svg
-54,Peru,Lima,3,peru.svg,peru.svg
-55,Philippines,Manila,2,philippines.svg,philippines.svg
-56,Poland,Warsaw,1,poland.svg,poland.svg
-57,Portugal,Lisbon,1,portugal.svg,portugal.svg
-58,Saudi Arabia,Riyadh,2,saudi-arabia.svg,saudi-arabia.svg
-59,Senegal,Dakar,4,senegal.svg,senegal.svg
-60,Slovakia,Bratislava,1,slovakia.svg,slovakia.svg
-61,Slovenia,Ljubljana,1,slovenia.svg,slovenia.svg
-62,South Africa,Cape Town,4,south-africa.svg,south-africa.svg
-63,South Korea,Seoul,2,south-korea.svg,south-korea.svg
-64,Spain,Madrid,1,spain.svg,spain.svg
-65,Sudan,Khartoum,4,sudan.svg,sudan.svg
-66,Sweden,Stockholm,1,sweden.svg,sweden.svg
-67,Switzerland,Bern,1,switzerland.svg,switzerland.svg
-68,Syria,Damascus,2,syria.svg,syria.svg
-69,Tanzania,Dodoma,4,tanzania.svg,tanzania.svg
-70,Thailand,Bangkok,2,thailand.svg,thailand.svg
-71,United Kingdom,London,1,uk.svg,uk.svg
-72,Ukraine,Kyiv,1,ukraine.svg,ukraine.svg
-73,United Arab Emirates,Abu Dhabi,2,uae.svg,uae.svg
-74,Uruguay,Montevideo,3,uruguay.svg,uruguay.svg
-75,United States,Washington,3,usa.svg,usa.svg
-76,Uzbekistan,Tashkent,2,uzbekistan.svg,uzbekistan.svg
-77,Venezuela,Caracas,3,venezuela.svg,venezuela.svg
-78,Yemen,Sanaa,2,yemen.svg,yemen.svg
-79,Zambia,Lusaka,4,zambia.svg,zambia.svg
-80,Zimbabwe,Harare,4,zimbabwe.svg,zimbabwe.svg
+1,Afghanistan,Kabul,2,NULL,afghanistan.svg
+2,Albania,Tirana,1,NULL,albania.svg
+3,Algeria,Algiers,4,algeria.svg,algeria.svg
+4,Angola,Luanda,4,angola.svg,angola.svg
+5,Argentina,Buenos Aires,3,argentina.svg,argentina.svg
+6,Armenia,Yerevan,2,NULL,armenia.svg
+7,Austria,Vienna,1,austria.svg,austria.svg
+8,Azerbaijan,Baku,2,NULL,azerbaijan.svg
+9,Bahamas,Nassau,3,bahamas.svg,bahamas.svg
+10,Belarus,Minsk,1,belarus.svg,belarus.svg
+11,Belgium,Brussels,1,belgium.svg,belgium.svg
+12,Bolivia,La Paz,3,bolivia.svg,bolivia.svg
+13,Botswana,Gaborone,4,botswana.svg,botswana.svg
+14,Brazil,Brasília,3,brazil.svg,brazil.svg
+15,Bulgaria,Sofia,1,bulgaria.svg,bulgaria.svg
+16,Cameroon,Yaounde,4,cameroon.svg,cameroon.svg
+17,Chad,N'Djamena,4,NULL,chad.svg
+18,Canada,Ottawa,3,canada.svg,canada.svg
+19,Chile,Santiago,3,chile.svg,chile.svg
+20,China,Beijing,2,china.svg,china.svg
+21,Colombia,Bogota,3,colombia.svg,colombia.svg
+22,Costa Rica,San Jose,3,NULL,costa-rica.svg
+23,Croatia,Zagreb,1,croatia.svg,croatia.svg
+24,Cuba,Havana,3,cuba.svg,cuba.svg
+25,Cyprus,Nicosia,1,NULL,cyprus.svg
+26,Czech Republic,Prague,1,czech-republic.svg,czech-republic.svg
+27,Denmark,Copenhagen,1,denmark.svg,denmark.svg
+28,Dominican Republic,Santo Domingo,3,NULL,NULL
+29,Ecuador,Quito,3,NULL,ecuador.svg
+30,Egypt,Cairo,4,egypt.svg,egypt.svg
+31,Estonia,Tallinn,1,NULL,estonia.svg
+32,Ethiopia,Addis Ababa,4,NULL,ethiopia.svg
+33,Finland,Helsinki,1,finland.svg,finland.svg
+34,France,Paris,1,france.svg,france.svg
+35,Georgia,Tbilisi,2,georgia.svg,georgia.svg
+36,Germany,Berlin,1,germany.svg,germany.svg
+37,Ghana,Accra,4,ghana.svg,ghana.svg
+38,Greece,Athens,1,NULL,greece.svg
+39,Guinea,Conakry,4,guinea.svg,guinea.svg
+40,Honduras,Tegucigalpa,3,NULL,honduras.svg
+41,Hungary,Budapest,1,hungary.svg,hungary.svg
+42,Iceland,Reykjavík,1,iceland.svg,iceland.svg
+43,India,New Delhi,2,india.svg,india.svg
+44,Indonesia,Jakarta,2,indonesia.svg,indonesia.svg
+45,Iran,Tehran,2,iran.svg,iran.svg
+46,Iraq,Baghdad,2,NULL,iraq.svg
+47,Ireland,Dublin,1,NULL,ireland.svg
+48,Israel,Jerusalem,2,israel.svg,israel.svg
+49,Italy,Rome,1,italy.svg,italy.svg
+50,Jamaica,Kingston,3,NULL,jamaica.svg
+51,Japan,Tokyo,2,japan.svg,japan.svg
+52,Kazakhstan,Nur-Sultan,2,kazakhstan.svg,kazakhstan.svg
+53,Kenya,Nairobi,4,kenya.svg,kenya.svg
+54,Kyrgyzstan,Bishkek,2,kyrgyzstan.svg,kyrgyzstan.svg
+55,Laos,Vientiane,2,laos.svg,laos.svg
+56,Latvia,Riga,1,NULL,latvia.svg
+57,Liberia,Monrovia,4,liberia.svg,liberia.svg
+58,Libya,Tripoli,4,libya.svg,libya.svg
+59,Liechtenstein,Vaduz,1,NULL,liechtenstein.svg
+60,Lithuania,Vilnius,1,NULL,lithuania.svg
+61,Luxembourg,Luxembourg,1,NULL,luxembourg.svg
+62,Madagascar,Antananarivo,4,NULL,madagascar.svg
+63,Malaysia,Kuala Lumpur,2,malaysia.svg,malaysia.svg
+64,Mali,Bamako,4,mali.svg,mali.svg
+65,Mauritania,Nouakchott,4,mauritania.svg,mauritania.svg
+66,Mexico,Mexico City,3,mexico.svg,mexico.svg
+67,Moldova,Chisinau,1,NULL,moldova.svg
+68,Mongolia,Ulaanbaatar,2,mongolia.svg,mongolia.svg
+69,Morocco,Rabat,4,morocco.svg,morocco.svg
+70,Myanmar,Naypyidaw,2,myanmar.svg,myanmar.svg
+71,Namibia,Windhoek,4,namibia.svg,namibia.svg
+72,Nepal,Kathmandu,2,NULL,nepal.svg
+73,Netherlands,Amsterdam,1,NULL,netherlands.svg
+74,Nicaragua,Managua,3,NULL,nicaragua.svg
+75,Niger,Niamey,4,niger.svg,niger.svg
+76,Nigeria,Abuja,4,NULL,nigeria.svg
+77,Norway,Oslo,1,norway.svg,norway.svg
+78,Oman,Muscat,2,NULL,NULL
+79,Pakistan,Islamabad,2,pakistan.svg,pakistan.svg
+80,Panama,Panama City,3,NULL,panama.svg
+81,Paraguay,Asuncion,3,paraguay.svg,paraguay.svg
+82,Peru,Lima,3,peru.svg,peru.svg
+83,Philippines,Manila,2,philippines.svg,philippines.svg
+84,Poland,Warsaw,1,poland.svg,poland.svg
+85,Portugal,Lisbon,1,portugal.svg,portugal.svg
+86,Qatar,Doha,2,NULL,qatar.svg
+87,Romania,Bucharest,1,NULL,romania.svg
+88,Saudi Arabia,Riyadh,2,saudi-arabia.svg,saudi-arabia.svg
+89,Senegal,Dakar,4,senegal.svg,senegal.svg
+90,Slovakia,Bratislava,1,slovakia.svg,slovakia.svg
+91,Slovenia,Ljubljana,1,slovenia.svg,slovenia.svg
+92,South Africa,Cape Town,4,south-africa.svg,south-africa.svg
+93,South Korea,Seoul,2,south-korea.svg,south-korea.svg
+94,Spain,Madrid,1,spain.svg,spain.svg
+95,Sudan,Khartoum,4,sudan.svg,sudan.svg
+96,Sweden,Stockholm,1,sweden.svg,sweden.svg
+97,Switzerland,Bern,1,switzerland.svg,switzerland.svg
+98,Syria,Damascus,2,syria.svg,syria.svg
+99,Tajikistan,Dushanbe,2,NULL,tajikistan.svg
+100,Tanzania,Dodoma,4,tanzania.svg,tanzania.svg
+101,Thailand,Bangkok,2,thailand.svg,thailand.svg
+102,Turkey,Ankara,2,NULL,turkey.svg
+103,Turkmenistan,Ashgabat,2,NULL,turkmenistan.svg
+104,United Kingdom,London,1,uk.svg,uk.svg
+105,Ukraine,Kyiv,1,ukraine.svg,ukraine.svg
+106,United Arab Emirates,Abu Dhabi,2,uae.svg,uae.svg
+107,Uruguay,Montevideo,3,uruguay.svg,uruguay.svg
+108,Uzbekistan,Tashkent,2,NULL,uzbekistan.svg
+109,United States,Washington,3,usa.svg,usa.svg
+110,Uzbekistan,Tashkent,2,uzbekistan.svg,uzbekistan.svg
+111,Venezuela,Caracas,3,venezuela.svg,venezuela.svg
+112,Vietnam,Hanoi,2,NULL,vietnam.svg
+113,Yemen,Sanaa,2,yemen.svg,yemen.svg
+114,Zambia,Lusaka,4,zambia.svg,zambia.svg
+115,Zimbabwe,Harare,4,zimbabwe.svg,zimbabwe.svg
