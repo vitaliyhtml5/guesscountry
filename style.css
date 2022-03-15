@@ -431,7 +431,7 @@ button:active {
         display: block;
         text-align: center;
         margin-bottom: 10px;
-        margin-top: -5px;
+        margin-top: 5px;
         font-size: 30px;
     }
     .content-wrap label {

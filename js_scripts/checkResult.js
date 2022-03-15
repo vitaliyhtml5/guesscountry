@@ -43,7 +43,7 @@ const checkResult = (data, testDetails, count, result) => {
             checkedAnsw.classList.add('incorrect-answ');
             checkedAnsw.style.color = '#f94457';
         }
-        label[correctIndex].style.color = '#39a33e';
+        label[correctIndex].style.color = '#348837';
     }
 
     //Set timer
