@@ -350,3 +350,117 @@ button:active {
     text-align: center;
     background-color: #fb5f6e;
 }
+
+/* Media queries */
+@media (max-width: 767px) {
+    .header-wrap h1 {
+        font-size: 38px;
+    }
+    .header-wrap img {
+        width: 38px;
+    }
+    .content-wrap {
+        padding-top: 10px;
+    }
+    .quiz-wrap,
+    .settings-wrap {
+        width: 100%;
+    }
+    .content-wrap h2 {
+        font-size: 30px;
+    }
+    .timer {
+        right: 0;
+    }
+}
+@media (max-width: 490px) {
+    .container {
+        padding-bottom: 5px;
+    }
+    .header-wrap img {
+        width: 30px;
+        margin-right: 10px;
+    }
+    .header-wrap h1 {
+        font-size: 30px;
+    }
+    .utility-wrap {
+        padding-top: 10px;
+    }
+    .hint {
+        margin-left: 5px;
+    }
+    .content-wrap {
+        padding-top: 5px;
+    }
+    .content-wrap h2 {
+        font-size: 24px;
+    }
+    .timer {
+        top: 38px;
+        font-size: 24px;
+    }
+    .quiz-wrap {
+        margin: 15px auto 0;
+    }
+    .answer {
+        order: 2;
+        padding-left: 10px;
+    }
+    .question {
+        order: 1;
+        width: 100%;
+    }
+    .check-btn-wrap {
+        order: 3;
+    }
+    .quiz-wrap img {
+        display: block;
+        margin: 0 auto;
+    }
+    .quiz-wrap img[data-type="flag"] {
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    .quiz-wrap img[data-type="map"] {
+        max-width: 250px;
+        height: 115px;
+        margin-bottom: 12px;
+    }
+    .question b {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: -5px;
+        font-size: 30px;
+    }
+    .content-wrap label {
+        margin-bottom: 25px;
+        font-size: 22px;
+    }
+    .check-btn-wrap button {
+        margin: 30px auto 25px;
+    }
+    .preview-wrap {
+        width: 100%;
+        margin: 30px auto;
+    }
+    .preview-btn {
+        width: 100%;
+    }
+    .settings-page {
+        margin-top: -15px;
+    }
+    .settings-wrap {
+        grid-gap: 10px;
+        margin: 15px auto 20px;
+        padding: 15px 25px;
+    }
+    .settings-wrap legend {
+        font-size: 20px;
+    }
+    .settings-wrap fieldset label {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
